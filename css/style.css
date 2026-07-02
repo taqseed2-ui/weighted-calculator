@@ -1,0 +1,161 @@
+:root {
+  --primary: #075ebd;
+  --primary-dark: #004f9e;
+  --bg: #eef6ff;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #64748b;
+  --border: #d7e2ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  direction: rtl;
+  font-family: Tahoma, Arial, sans-serif;
+  background: linear-gradient(135deg, #eef6ff, #f8fbff);
+  color: var(--text);
+}
+
+.app {
+  min-height: 100vh;
+  padding: 30px 15px;
+}
+
+.card {
+  max-width: 900px;
+  margin: auto;
+  background: var(--card);
+  border-radius: 26px;
+  padding: 32px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.10);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.badge {
+  display: inline-block;
+  background: #eaf4ff;
+  color: var(--primary);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 30px;
+  line-height: 1.6;
+}
+
+.subtitle {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-size: 16px;
+  background: white;
+}
+
+.formula {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f1f7ff;
+  border-radius: 16px;
+  color: var(--primary);
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.actions {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.primary:hover {
+  background: var(--primary-dark);
+}
+
+.secondary {
+  background: #6b7280;
+  color: white;
+}
+
+.result {
+  margin-top: 22px;
+  padding: 24px;
+  background: #eaf4ff;
+  color: var(--primary);
+  border-radius: 18px;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 1.9;
+}
+
+.note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .card {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .grid,
+  .actions {
+    grid-template-columns: 1fr;
+  }
+}
