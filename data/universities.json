@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "lastUpdate": "2026-07-02",
   "universities": [
     {
@@ -19,32 +19,6 @@
           "highSchool": 50,
           "qudrat": 50,
           "tahseeli": 0
-        }
-      ]
-    },
-    {
-      "id": "iau",
-      "name": "جامعة الإمام عبدالرحمن بن فيصل",
-      "tracks": [
-        {
-          "id": "weighted",
-          "name": "النسبة الموزونة",
-          "highSchool": 30,
-          "qudrat": 30,
-          "tahseeli": 40
-        }
-      ]
-    },
-    {
-      "id": "imamu",
-      "name": "جامعة الإمام محمد بن سعود الإسلامية",
-      "tracks": [
-        {
-          "id": "medicine",
-          "name": "كلية الطب",
-          "highSchool": 30,
-          "qudrat": 30,
-          "tahseeli": 40
         }
       ]
     },
@@ -84,6 +58,97 @@
           "highSchool": 40,
           "qudrat": 30,
           "tahseeli": 30
+        }
+      ]
+    },
+    {
+      "id": "iau",
+      "name": "جامعة الإمام عبدالرحمن بن فيصل",
+      "tracks": [
+        {
+          "id": "weighted",
+          "name": "النسبة الموزونة",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
+        }
+      ]
+    },
+    {
+      "id": "imamu",
+      "name": "جامعة الإمام محمد بن سعود الإسلامية",
+      "tracks": [
+        {
+          "id": "medicine",
+          "name": "كلية الطب",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
+        }
+      ]
+    },
+    {
+      "id": "pnu",
+      "name": "جامعة الأميرة نورة بنت عبدالرحمن",
+      "tracks": [
+        {
+          "id": "weighted",
+          "name": "النسبة الموزونة",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
+        }
+      ]
+    },
+    {
+      "id": "mu",
+      "name": "جامعة المجمعة",
+      "tracks": [
+        {
+          "id": "weighted",
+          "name": "النسبة الموزونة",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
+        }
+      ]
+    },
+    {
+      "id": "kfu",
+      "name": "جامعة الملك فيصل",
+      "tracks": [
+        {
+          "id": "weighted",
+          "name": "النسبة الموزونة",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
+        }
+      ]
+    },
+    {
+      "id": "kku",
+      "name": "جامعة الملك خالد",
+      "tracks": [
+        {
+          "id": "weighted",
+          "name": "النسبة الموزونة",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
+        }
+      ]
+    },
+    {
+      "id": "tu",
+      "name": "جامعة الطائف",
+      "tracks": [
+        {
+          "id": "weighted",
+          "name": "النسبة الموزونة",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
         }
       ]
     }
