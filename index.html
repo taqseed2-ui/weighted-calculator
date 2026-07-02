@@ -3,161 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>حاسبة النسبة الموزونة</title>
+
+<title>حاسبة الجامعات السعودية</title>
 
 <style>
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:Tahoma,Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,sans-serif;
 }
+
 body{
-    background:#eef3f8;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    padding:20px;
+background:#eef4fb;
+padding:25px;
 }
-.card{
-    width:100%;
-    max-width:500px;
-    background:#fff;
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+.container{
+max-width:700px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
+
 h1{
-    text-align:center;
-    color:#1565c0;
-    margin-bottom:25px;
+text-align:center;
+color:#005bbb;
+margin-bottom:25px;
 }
+
 label{
-    display:block;
-    margin:15px 0 8px;
-    font-weight:bold;
-    color:#333;
+display:block;
+margin-top:15px;
+margin-bottom:8px;
+font-weight:bold;
 }
-input{
-    width:100%;
-    padding:14px;
-    border:1px solid #ccc;
-    border-radius:10px;
-    font-size:17px;
+
+select,input{
+width:100%;
+padding:14px;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:18px;
 }
-input:focus{
-    outline:none;
-    border-color:#1565c0;
-}
+
 button{
-    width:100%;
-    padding:15px;
-    margin-top:25px;
-    font-size:18px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
+width:100%;
+padding:16px;
+margin-top:25px;
+background:#005bbb;
+color:#fff;
+border:none;
+border-radius:10px;
+font-size:20px;
+cursor:pointer;
 }
-#calc{
-    background:#1565c0;
-    color:white;
+
+button:hover{
+background:#004899;
 }
-#calc:hover{
-    background:#0d47a1;
-}
-#clear{
-    margin-top:10px;
-    background:#f44336;
-    color:white;
-}
-#clear:hover{
-    background:#c62828;
-}
+
 .result{
-    margin-top:25px;
-    background:#e3f2fd;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
+margin-top:30px;
+background:#e8f3ff;
+padding:25px;
+border-radius:15px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#005bbb;
 }
-.result h2{
-    color:#1565c0;
-    margin-bottom:10px;
-}
-#answer{
-    font-size:40px;
-    color:#0d47a1;
-    font-weight:bold;
-}
-.footer{
-    text-align:center;
-    margin-top:20px;
-    color:#666;
+
+.info{
+margin-top:15px;
+text-align:center;
+font-size:18px;
+color:#444;
 }
 </style>
 
 </head>
+
 <body>
 
-<div class="card">
+<div class="container">
 
-<h1>حاسبة النسبة الموزونة</h1>
+<h1>حاسبة الجامعات السعودية</h1>
+
+<label>اختر الجامعة</label>
+
+<select id="uni">
+
+<option>جامعة الملك سعود</option>
+<option>جامعة الملك عبدالعزيز</option>
+<option>جامعة الإمام عبدالرحمن بن فيصل</option>
+<option>جامعة أم القرى</option>
+<option>جامعة طيبة</option>
+<option>جامعة القصيم</option>
+<option>جامعة الملك خالد</option>
+<option>جامعة تبوك</option>
+<option>جامعة الجوف</option>
+<option>جامعة حائل</option>
+<option>جامعة نجران</option>
+<option>جامعة جازان</option>
+<option>جامعة الباحة</option>
+<option>جامعة الحدود الشمالية</option>
+<option>جامعة شقراء</option>
+<option>جامعة المجمعة</option>
+<option>جامعة بيشة</option>
+<option>جامعة الأمير سطام</option>
+<option>جامعة جدة</option>
+
+</select>
 
 <label>درجة الثانوية</label>
-<input id="school" type="number" min="0" max="100" placeholder="مثال: 98">
+<input type="number" id="school">
 
 <label>درجة القدرات</label>
-<input id="qudrat" type="number" min="0" max="100" placeholder="مثال: 85">
+<input type="number" id="qudrat">
 
 <label>درجة التحصيلي</label>
-<input id="tahsili" type="number" min="0" max="100" placeholder="مثال: 90">
+<input type="number" id="tahsili">
 
-<button id="calc" onclick="calculate()">احسب النسبة</button>
+<button onclick="calc()">
+احسب النسبة الموزونة
+</button>
 
-<button id="clear" onclick="resetForm()">إعادة تعيين</button>
-
-<div class="result">
-<h2>النسبة الموزونة</h2>
-<div id="answer">--</div>
+<div class="result" id="result">
+--
 </div>
 
-<div class="footer">
-30٪ ثانوي + 30٪ قدرات + 40٪ تحصيلي
-</div>
+<div class="info" id="info"></div>
 
 </div>
 
 <script>
-function calculate(){
 
-let school=parseFloat(document.getElementById("school").value);
-let qudrat=parseFloat(document.getElementById("qudrat").value);
-let tahsili=parseFloat(document.getElementById("tahsili").value);
+function calc(){
 
-if(isNaN(school)||isNaN(qudrat)||isNaN(tahsili)){
-alert("يرجى إدخال جميع الدرجات");
-return;
-}
+let s=parseFloat(document.getElementById("school").value)||0;
+let q=parseFloat(document.getElementById("qudrat").value)||0;
+let t=parseFloat(document.getElementById("tahsili").value)||0;
 
-if(school<0||school>100||qudrat<0||qudrat>100||tahsili<0||tahsili>100){
-alert("يجب أن تكون جميع الدرجات بين 0 و100");
-return;
-}
+let total=(s*0.30)+(q*0.30)+(t*0.40);
 
-let result=(school*0.30)+(qudrat*0.30)+(tahsili*0.40);
+document.getElementById("result").innerHTML=
+total.toFixed(2)+" %";
 
-document.getElementById("answer").innerHTML=result.toFixed(2)+"%";
-}
-
-function resetForm(){
-
-document.getElementById("school").value="";
-document.getElementById("qudrat").value="";
-document.getElementById("tahsili").value="";
-document.getElementById("answer").innerHTML="--";
+document.getElementById("info").innerHTML=
+"الجامعة المختارة : "+document.getElementById("uni").value;
 
 }
+
 </script>
 
 </body>
