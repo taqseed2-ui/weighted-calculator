@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "lastUpdate": "2026-07-02",
   "universities": [
     {
@@ -23,15 +23,28 @@
       ]
     },
     {
-      "id": "uqu",
-      "name": "جامعة أم القرى",
+      "id": "iau",
+      "name": "جامعة الإمام عبدالرحمن بن فيصل",
       "tracks": [
         {
-          "id": "scientific",
-          "name": "التخصصات العلمية",
-          "highSchool": 40,
+          "id": "weighted",
+          "name": "النسبة الموزونة",
+          "highSchool": 30,
           "qudrat": 30,
-          "tahseeli": 30
+          "tahseeli": 40
+        }
+      ]
+    },
+    {
+      "id": "imamu",
+      "name": "جامعة الإمام محمد بن سعود الإسلامية",
+      "tracks": [
+        {
+          "id": "medicine",
+          "name": "كلية الطب",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
         }
       ]
     },
@@ -40,8 +53,8 @@
       "name": "جامعة الملك سعود",
       "tracks": [
         {
-          "id": "science",
-          "name": "المسار العلمي",
+          "id": "weighted",
+          "name": "النسبة الموزونة",
           "highSchool": 30,
           "qudrat": 30,
           "tahseeli": 40
@@ -53,11 +66,24 @@
       "name": "جامعة الملك عبدالعزيز",
       "tracks": [
         {
-          "id": "science",
-          "name": "المسار العلمي",
+          "id": "weighted",
+          "name": "النسبة الموزونة",
           "highSchool": 30,
           "qudrat": 30,
           "tahseeli": 40
+        }
+      ]
+    },
+    {
+      "id": "uqu",
+      "name": "جامعة أم القرى",
+      "tracks": [
+        {
+          "id": "scientific",
+          "name": "التخصصات العلمية",
+          "highSchool": 40,
+          "qudrat": 30,
+          "tahseeli": 30
         }
       ]
     }
