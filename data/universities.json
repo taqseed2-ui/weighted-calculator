@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "lastUpdate": "2026-07-02",
+  "universities": [
+    {
+      "id": "qu",
+      "name": "جامعة القصيم",
+      "tracks": [
+        {
+          "id": "weighted",
+          "name": "النسبة الموزونة",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
+        },
+        {
+          "id": "equivalent",
+          "name": "النسبة المكافئة",
+          "highSchool": 50,
+          "qudrat": 50,
+          "tahseeli": 0
+        }
+      ]
+    },
+    {
+      "id": "ksu",
+      "name": "جامعة الملك سعود",
+      "tracks": [
+        {
+          "id": "science",
+          "name": "المسار العلمي",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
+        }
+      ]
+    },
+    {
+      "id": "kau",
+      "name": "جامعة الملك عبدالعزيز",
+      "tracks": [
+        {
+          "id": "science",
+          "name": "المسار العلمي",
+          "highSchool": 30,
+          "qudrat": 30,
+          "tahseeli": 40
+        }
+      ]
+    },
+    {
+      "id": "uqu",
+      "name": "جامعة أم القرى",
+      "tracks": [
+        {
+          "id": "science",
+          "name": "التخصصات العلمية",
+          "highSchool": 40,
+          "qudrat": 30,
+          "tahseeli": 30
+        }
+      ]
+    }
+  ]
+}
