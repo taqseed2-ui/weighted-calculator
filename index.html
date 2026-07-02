@@ -3,64 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>حاسبة القبول في الجامعات السعودية (الموزونة والمكافئة)</title>
-  <meta name="description" content="حاسبة القبول في الجامعات السعودية لحساب النسبة الموزونة والمكافئة حسب الجامعة والمسار." />
+  <title>قبولي | دليل القبول في الجامعات السعودية</title>
+  <meta name="description" content="قبولي منصة لحساب النسبة الموزونة والمكافئة للقبول في الجامعات السعودية حسب الجامعة والمسار." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <main class="app">
-    <section class="card">
-      <div class="header">
-        <span class="badge">أداة مجانية للطلاب</span>
-        <h1>حاسبة القبول في الجامعات السعودية <span>(الموزونة والمكافئة)</span></h1>
-        <p class="subtitle">
-          احسب نسبتك للقبول الجامعي حسب الجامعة والمسار باستخدام درجات الثانوية والقدرات والتحصيلي.
-        </p>
-      </div>
-
-      <div class="grid">
-        <div class="field">
-          <label for="university">اختر الجامعة</label>
-          <select id="university"></select>
-        </div>
-
-        <div class="field">
-          <label for="track">اختر المسار / نوع النسبة</label>
-          <select id="track"></select>
-        </div>
-
-        <div class="field">
-          <label for="highSchool">درجة الثانوية</label>
-          <input id="highSchool" type="number" min="0" max="100" placeholder="مثال: 95" />
-        </div>
-
-        <div class="field">
-          <label for="qudrat">درجة القدرات</label>
-          <input id="qudrat" type="number" min="0" max="100" placeholder="مثال: 88" />
-        </div>
-
-        <div class="field" id="tahseeliField">
-          <label for="tahseeli">درجة التحصيلي</label>
-          <input id="tahseeli" type="number" min="0" max="100" placeholder="مثال: 90" />
+  <header class="qabooli-top">
+    <div class="qabooli-container nav">
+      <div class="brand">
+        <span class="brand-icon">ق</span>
+        <div>
+          <strong>قبولي</strong>
+          <small>دليل القبول في الجامعات السعودية</small>
         </div>
       </div>
 
-      <div class="formula" id="formula">اختر الجامعة والمسار لعرض المعادلة</div>
+      <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="calculator.html">الحاسبة</a>
+        <a href="#universities">الجامعات</a>
+        <a href="#services">الخدمات</a>
+      </nav>
 
-      <div class="actions">
-        <button class="primary" id="calculateBtn">احسب النسبة</button>
-        <button class="secondary" id="resetBtn">مسح البيانات</button>
+      <a class="start-btn" href="calculator.html">ابدأ الحساب</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="qabooli-container hero-grid">
+        <div class="hero-text">
+          <span class="badge">منصة قبول جامعي</span>
+          <h1>احسب نسبتك الموزونة والمكافئة في الجامعات السعودية</h1>
+          <p>
+            أداة تساعدك على حساب نسبة القبول حسب الجامعة والمسار، مع قاعدة بيانات قابلة للتحديث من المصادر الرسمية.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-btn" href="calculator.html">ابدأ حساب النسبة الآن</a>
+            <a class="secondary-btn" href="#universities">استعرض الجامعات</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>نتيجة تجريبية</h3>
+          <div class="score">85.62%</div>
+          <p>النسبة تظهر بعد إدخال درجاتك واختيار الجامعة.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="result" id="result">--</div>
+    <section class="qabooli-container stats">
+      <div><strong>+11</strong><span>جامعة مدعومة</span></div>
+      <div><strong>18</strong><span>معادلة قبول</span></div>
+      <div><strong>موزونة</strong><span>حسب كل جامعة</span></div>
+      <div><strong>مكافئة</strong><span>عند توفرها</span></div>
+    </section>
 
-      <p class="note">
-        تنبيه: تختلف أوزان القبول حسب الجامعة والمسار والسنة الدراسية، لذلك يُنصح دائمًا بمراجعة موقع الجامعة الرسمي.
-      </p>
+    <section id="services" class="qabooli-container section">
+      <h2>خدمات قبولي</h2>
+      <div class="cards">
+        <a class="card" href="calculator.html">
+          <h3>🧮 حاسبة القبول</h3>
+          <p>احسب النسبة الموزونة والمكافئة بسهولة.</p>
+        </a>
+        <div class="card">
+          <h3>🎓 الجامعات</h3>
+          <p>استعرض معادلات القبول للجامعات السعودية.</p>
+        </div>
+        <div class="card">
+          <h3>📊 نسب القبول</h3>
+          <p>قسم قادم لعرض نسب القبول حسب التخصص.</p>
+        </div>
+        <div class="card">
+          <h3>📅 مواعيد التقديم</h3>
+          <p>قسم قادم لمواعيد التسجيل والقبول.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="universities" class="qabooli-container section">
+      <h2>الجامعات المدعومة</h2>
+      <div class="universities">
+        <span>جامعة القصيم</span>
+        <span>جامعة الملك سعود</span>
+        <span>جامعة الملك عبدالعزيز</span>
+        <span>جامعة أم القرى</span>
+        <span>جامعة الإمام عبدالرحمن بن فيصل</span>
+        <span>جامعة الإمام محمد بن سعود</span>
+        <span>جامعة الأميرة نورة</span>
+        <span>جامعة المجمعة</span>
+        <span>جامعة الملك فيصل</span>
+        <span>جامعة الملك خالد</span>
+        <span>جامعة الطائف</span>
+      </div>
     </section>
   </main>
 
-  <script src="js/app.js"></script>
+  <footer>
+    <p>قبولي © 2026 - دليل القبول في الجامعات السعودية</p>
+  </footer>
 </body>
 </html>
