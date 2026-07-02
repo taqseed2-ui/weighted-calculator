@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "lastUpdate": "2026-07-02",
   "universities": [
     {
@@ -19,6 +19,19 @@
           "highSchool": 50,
           "qudrat": 50,
           "tahseeli": 0
+        }
+      ]
+    },
+    {
+      "id": "uqu",
+      "name": "جامعة أم القرى",
+      "tracks": [
+        {
+          "id": "scientific",
+          "name": "التخصصات العلمية",
+          "highSchool": 40,
+          "qudrat": 30,
+          "tahseeli": 30
         }
       ]
     },
@@ -45,19 +58,6 @@
           "highSchool": 30,
           "qudrat": 30,
           "tahseeli": 40
-        }
-      ]
-    },
-    {
-      "id": "uqu",
-      "name": "جامعة أم القرى",
-      "tracks": [
-        {
-          "id": "science",
-          "name": "التخصصات العلمية",
-          "highSchool": 40,
-          "qudrat": 30,
-          "tahseeli": 30
         }
       ]
     }
