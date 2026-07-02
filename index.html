@@ -1,163 +1,66 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>حاسبة الجامعات السعودية</title>
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Tahoma,sans-serif;
-}
-
-body{
-background:#eef4fb;
-padding:25px;
-}
-
-.container{
-max-width:700px;
-margin:auto;
-background:#fff;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-h1{
-text-align:center;
-color:#005bbb;
-margin-bottom:25px;
-}
-
-label{
-display:block;
-margin-top:15px;
-margin-bottom:8px;
-font-weight:bold;
-}
-
-select,input{
-width:100%;
-padding:14px;
-border:1px solid #ccc;
-border-radius:10px;
-font-size:18px;
-}
-
-button{
-width:100%;
-padding:16px;
-margin-top:25px;
-background:#005bbb;
-color:#fff;
-border:none;
-border-radius:10px;
-font-size:20px;
-cursor:pointer;
-}
-
-button:hover{
-background:#004899;
-}
-
-.result{
-margin-top:30px;
-background:#e8f3ff;
-padding:25px;
-border-radius:15px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
-color:#005bbb;
-}
-
-.info{
-margin-top:15px;
-text-align:center;
-font-size:18px;
-color:#444;
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حاسبة القبول في الجامعات السعودية (الموزونة والمكافئة)</title>
+  <meta name="description" content="حاسبة القبول في الجامعات السعودية لحساب النسبة الموزونة والمكافئة حسب الجامعة والمسار." />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <main class="app">
+    <section class="card">
+      <div class="header">
+        <span class="badge">أداة مجانية للطلاب</span>
+        <h1>حاسبة القبول في الجامعات السعودية <span>(الموزونة والمكافئة)</span></h1>
+        <p class="subtitle">
+          احسب نسبتك للقبول الجامعي حسب الجامعة والمسار باستخدام درجات الثانوية والقدرات والتحصيلي.
+        </p>
+      </div>
 
-<div class="container">
+      <div class="grid">
+        <div class="field">
+          <label for="university">اختر الجامعة</label>
+          <select id="university"></select>
+        </div>
 
-<h1>حاسبة الجامعات السعودية</h1>
+        <div class="field">
+          <label for="track">اختر المسار / نوع النسبة</label>
+          <select id="track"></select>
+        </div>
 
-<label>اختر الجامعة</label>
+        <div class="field">
+          <label for="highSchool">درجة الثانوية</label>
+          <input id="highSchool" type="number" min="0" max="100" placeholder="مثال: 95" />
+        </div>
 
-<select id="uni">
+        <div class="field">
+          <label for="qudrat">درجة القدرات</label>
+          <input id="qudrat" type="number" min="0" max="100" placeholder="مثال: 88" />
+        </div>
 
-<option>جامعة الملك سعود</option>
-<option>جامعة الملك عبدالعزيز</option>
-<option>جامعة الإمام عبدالرحمن بن فيصل</option>
-<option>جامعة أم القرى</option>
-<option>جامعة طيبة</option>
-<option>جامعة القصيم</option>
-<option>جامعة الملك خالد</option>
-<option>جامعة تبوك</option>
-<option>جامعة الجوف</option>
-<option>جامعة حائل</option>
-<option>جامعة نجران</option>
-<option>جامعة جازان</option>
-<option>جامعة الباحة</option>
-<option>جامعة الحدود الشمالية</option>
-<option>جامعة شقراء</option>
-<option>جامعة المجمعة</option>
-<option>جامعة بيشة</option>
-<option>جامعة الأمير سطام</option>
-<option>جامعة جدة</option>
+        <div class="field" id="tahseeliField">
+          <label for="tahseeli">درجة التحصيلي</label>
+          <input id="tahseeli" type="number" min="0" max="100" placeholder="مثال: 90" />
+        </div>
+      </div>
 
-</select>
+      <div class="formula" id="formula">اختر الجامعة والمسار لعرض المعادلة</div>
 
-<label>درجة الثانوية</label>
-<input type="number" id="school">
+      <div class="actions">
+        <button class="primary" id="calculateBtn">احسب النسبة</button>
+        <button class="secondary" id="resetBtn">مسح البيانات</button>
+      </div>
 
-<label>درجة القدرات</label>
-<input type="number" id="qudrat">
+      <div class="result" id="result">--</div>
 
-<label>درجة التحصيلي</label>
-<input type="number" id="tahsili">
+      <p class="note">
+        تنبيه: تختلف أوزان القبول حسب الجامعة والمسار والسنة الدراسية، لذلك يُنصح دائمًا بمراجعة موقع الجامعة الرسمي.
+      </p>
+    </section>
+  </main>
 
-<button onclick="calc()">
-احسب النسبة الموزونة
-</button>
-
-<div class="result" id="result">
---
-</div>
-
-<div class="info" id="info"></div>
-
-</div>
-
-<script>
-
-function calc(){
-
-let s=parseFloat(document.getElementById("school").value)||0;
-let q=parseFloat(document.getElementById("qudrat").value)||0;
-let t=parseFloat(document.getElementById("tahsili").value)||0;
-
-let total=(s*0.30)+(q*0.30)+(t*0.40);
-
-document.getElementById("result").innerHTML=
-total.toFixed(2)+" %";
-
-document.getElementById("info").innerHTML=
-"الجامعة المختارة : "+document.getElementById("uni").value;
-
-}
-
-</script>
-
+  <script src="js/app.js"></script>
 </body>
 </html>
