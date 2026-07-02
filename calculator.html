@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حاسبة القبول في الجامعات السعودية (الموزونة والمكافئة)</title>
+  <meta name="description" content="حاسبة القبول في الجامعات السعودية لحساب النسبة الموزونة والمكافئة حسب الجامعة والمسار." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <section class="card">
+      <div class="header">
+        <span class="badge">أداة مجانية للطلاب</span>
+        <h1>حاسبة القبول في الجامعات السعودية <span>(الموزونة والمكافئة)</span></h1>
+        <p class="subtitle">
+          احسب نسبتك للقبول الجامعي حسب الجامعة والمسار باستخدام درجات الثانوية والقدرات والتحصيلي.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="university">اختر الجامعة</label>
+          <select id="university"></select>
+        </div>
+
+        <div class="field">
+          <label for="track">اختر المسار / نوع النسبة</label>
+          <select id="track"></select>
+        </div>
+
+        <div class="field">
+          <label for="highSchool">درجة الثانوية</label>
+          <input id="highSchool" type="number" min="0" max="100" placeholder="مثال: 95" />
+        </div>
+
+        <div class="field">
+          <label for="qudrat">درجة القدرات</label>
+          <input id="qudrat" type="number" min="0" max="100" placeholder="مثال: 88" />
+        </div>
+
+        <div class="field" id="tahseeliField">
+          <label for="tahseeli">درجة التحصيلي</label>
+          <input id="tahseeli" type="number" min="0" max="100" placeholder="مثال: 90" />
+        </div>
+      </div>
+
+      <div class="formula" id="formula">اختر الجامعة والمسار لعرض المعادلة</div>
+
+      <div class="actions">
+        <button class="primary" id="calculateBtn">احسب النسبة</button>
+        <button class="secondary" id="resetBtn">مسح البيانات</button>
+      </div>
+
+      <div class="result" id="result">--</div>
+
+      <p class="note">
+        تنبيه: تختلف أوزان القبول حسب الجامعة والمسار والسنة الدراسية، لذلك يُنصح دائمًا بمراجعة موقع الجامعة الرسمي.
+      </p>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
